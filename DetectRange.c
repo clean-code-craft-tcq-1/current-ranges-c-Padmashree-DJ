@@ -43,10 +43,10 @@ void SortArray(int *ChargingCurrentReadings, int numOfCCReadings)
     }
 }
 
-int  DetectContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings)
+void  DetectContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings)
 {
 	int StartIndex=0;
-	boolean IsStart=1;
+	bool IsStart=1;
 	int Iscontinuous=1;
 	SortArray(ChargingCurrentReadings, numOfCCReadings);
 	for (int i=0; i< numOfCCReadings; i++)
@@ -72,5 +72,4 @@ int  DetectContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings)
 		   Iscontinuous=1;
 		}
 	}
-	ret
 }
