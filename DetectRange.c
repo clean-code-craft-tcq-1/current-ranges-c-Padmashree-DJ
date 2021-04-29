@@ -53,9 +53,10 @@ RangeReading *DetectContinuousRange( int *ChargingCurrentReadings, int numOfCCRe
 {
 	int StartIndex=0;
 	bool IsStart=1;
-	int Iscontinuous=1;
+    int RangeCounter=1;
 	RangeReading l_RangeReading;
 	int ArrayIndex=0;
+	NumberofContRange=0;
 	SortArray(ChargingCurrentReadings, numOfCCReadings);
 	for (int i=0; i<numOfCCReadings; i++)
 	{
@@ -68,16 +69,16 @@ RangeReading *DetectContinuousRange( int *ChargingCurrentReadings, int numOfCCRe
 		int tempdiff =ChargingCurrentReadings[j]- ChargingCurrentReadings[i];
 		if (tempdiff== 0 ||tempdiff== 1)
 		{
-			Iscontinuous++;
+			RangeCounter++;
 		}
 		else
 		{
 		   NumberofContRange++;
-		   l_RangeReading=printFunction(StartIndex,ChargingCurrentReadings[i], Iscontinuous);
+		   l_RangeReading=printFunction(StartIndex,ChargingCurrentReadings[i], RangeCounter);
 		   ArrayofContRange[ArrayIndex]= l_RangeReading;
 		   ArrayIndex++;
 		   StartIndex= ChargingCurrentReadings[j];
-		   Iscontinuous=1;
+		   RangeCounter=1;
 		}
 	}
 	return ArrayofContRange;
