@@ -5,6 +5,7 @@
 
 int NumberofContRange=0;
 
+RangeReading ArrayofContRange[]={};
 int NumberofContinuousRange(int *ChargingCurrentReadings, int numOfCCReadings)
 {
 	int l_NumberofContRange=NumberofContRange;
@@ -19,10 +20,15 @@ void swap(int *xp, int *yp)
     *yp = temp;
 }
 
-Successtype printFunction( int StartIndex, int EndIndex, int NumberinRange)
+RangeReading printFunction( int a_StartIndex, int a_EndIndex, int a_NumberinRange)
 {
+	RangeReading l_RangeReading;
+	l_RangeReading.StartIndex=a_StartIndex;
+	l_RangeReading.EndIndex= a_EndIndex;
+	l_RangeReading.NumOfReadingsInRange= a_NumberinRange;
 	 printf("The number of readings in the range %d - %d is %d",  StartIndex, EndIndex , NumberinRange);
-	 return PrintSuccess;
+	 
+	 return l_RangeReading;
 }
 
 void SortArray(int *ChargingCurrentReadings, int numOfCCReadings)
@@ -43,11 +49,13 @@ void SortArray(int *ChargingCurrentReadings, int numOfCCReadings)
     }
 }
 
-void DetectContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings)
+RangeReading *DetectContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings)
 {
 	int StartIndex=0;
-	bool IsStart=1;
+	_Bool IsStart=1;
 	int Iscontinuous=1;
+	RangeReading l_RangeReading;
+	int ArrayIndex=0;
 	SortArray(ChargingCurrentReadings, numOfCCReadings);
 	for (int i=0; i<numOfCCReadings; i++)
 	{
@@ -65,10 +73,12 @@ void DetectContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings)
 		else
 		{
 		   NumberofContRange++;
-		   printFunction(StartIndex,ChargingCurrentReadings[i], Iscontinuous);
+		   l_RangeReading=printFunction(StartIndex,ChargingCurrentReadings[i], Iscontinuous);
+		   ArrayofContRange[ArrayIndex]= l_RangeReading;
+		   ArrayIndex++;
 		   StartIndex= ChargingCurrentReadings[j];
 		   Iscontinuous=1;
 		}
 	}
-	
+	return ArrayofContRange;
 }

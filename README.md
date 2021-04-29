@@ -53,4 +53,4 @@ Adapt/adopt/extend the `yml` files from one of your workflow folders.
 Implement one failing test and at least one passing test:
 
 - 1. "Case for detecting number of continuous range in the reading array given" the name of a **passing** test
-- 2. "Case for detecting number of continuous range in the reading array given:Failing" the name of a **failing** test
+- 2. "Case for detecting continuous range: Failing" the name of a **failing** test
