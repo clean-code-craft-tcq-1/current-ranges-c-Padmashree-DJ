@@ -52,19 +52,14 @@ void SortArray(int *ChargingCurrentReadings, int numOfCCReadings)
 RangeReading *DetectContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings)
 {
 	int StartIndex=0;
-	bool IsStart=1;
-    int RangeCounter=1;
+	int RangeCounter=1;
 	RangeReading l_RangeReading;
 	int ArrayIndex=0;
 	NumberofContRange=0;
+	StartIndex=ChargingCurrentReadings[0];
 	SortArray(ChargingCurrentReadings, numOfCCReadings);
 	for (int i=0; i<numOfCCReadings; i++)
-	{
-		if (IsStart==1)
-		{
-			 StartIndex=ChargingCurrentReadings[i];
-			 IsStart=0;
-		}
+	{		
 		int j=i+1;
 		int tempdiff =ChargingCurrentReadings[j]- ChargingCurrentReadings[i];
 		if (tempdiff== 0 ||tempdiff== 1)
