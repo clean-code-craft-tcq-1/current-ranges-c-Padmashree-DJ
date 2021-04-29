@@ -42,7 +42,7 @@ Range, Readings
 Start test-driven development:
 
 1. Establish quality parameters for your project: What is the maximum complexity you would allow?4
-2. How much duplication would you consider unacceptable? 0
+2. How much duplication would you consider unacceptable? more than 0(no duplicates)
 3. What is the coverage you'll aim for?100 %
 Adapt/adopt/extend the `yml` files from one of your workflow folders.
 
