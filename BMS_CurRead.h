@@ -6,9 +6,8 @@ RangeReading *DetectContinuousRange( int *ChargingCurrentReadings, int numOfCCRe
 int DetectNumReadingsInRange( int *ChargingCurrentReadings);
 
 typedef struct{
-	int StartIndex,
-	int EndIndex,
-	int NumOfReadingsInRange
+	int StartIndex;
+	int EndIndex;
+	int NumOfReadingsInRange;
 }RangeReading;
 
-RangeReading ArrayofContRange[];
