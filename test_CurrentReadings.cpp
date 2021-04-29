@@ -8,7 +8,7 @@
 TEST_CASE("Case for detecting number of continuous range in the reading array given:Failing") {
   int ChargingCurrentReadings[] = {3, 3, 5, 4, 10, 11, 12};
   int numOfCCReadings = sizeof(ChargingCurrentReadings) / sizeof(ChargingCurrentReadings[0]);
-  int Result= DetectContinuousRange(ChargingCurrentReadings, numOfCCReadings);
+  RangeReading *ArrofRange= DetectContinuousRange(ChargingCurrentReadings, numOfCCReadings);
   REQUIRE(NumberofContinuousRange(ChargingCurrentReadings, numOfCCReadings) == 3);
 }
 

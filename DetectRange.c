@@ -26,7 +26,7 @@ RangeReading printFunction( int a_StartIndex, int a_EndIndex, int a_NumberinRang
 	l_RangeReading.StartIndex=a_StartIndex;
 	l_RangeReading.EndIndex= a_EndIndex;
 	l_RangeReading.NumOfReadingsInRange= a_NumberinRange;
-	 printf("The number of readings in the range %d - %d is %d",  StartIndex, EndIndex , NumberinRange);
+	 printf("The number of readings in the range %d - %d is %d",  a_StartIndex, a_EndIndex , a_NumberinRange);
 	 
 	 return l_RangeReading;
 }
@@ -52,7 +52,7 @@ void SortArray(int *ChargingCurrentReadings, int numOfCCReadings)
 RangeReading *DetectContinuousRange( int *ChargingCurrentReadings, int numOfCCReadings)
 {
 	int StartIndex=0;
-	_Bool IsStart=1;
+	bool IsStart=1;
 	int Iscontinuous=1;
 	RangeReading l_RangeReading;
 	int ArrayIndex=0;
