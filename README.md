@@ -41,14 +41,16 @@ Range, Readings
 
 Start test-driven development:
 
-1. Establish quality parameters for your project: What is the maximum complexity you would allow? How much duplication would you consider unacceptable? What is the coverage you'll aim for?
+1. Establish quality parameters for your project: What is the maximum complexity you would allow?4
+2. How much duplication would you consider unacceptable? 0
+3. What is the coverage you'll aim for?100 %
 Adapt/adopt/extend the `yml` files from one of your workflow folders.
 
-1. Write the smallest possible failing test.
+4 Write the smallest possible failing test."Case for detecting number of continuous range in the reading array given:Failing"
 
-1. Write the minimum amount of code that'll make it pass.
+5. Write the minimum amount of code that'll make it pass.
 
-1. Write the next failing test.
+6. Write the next failing test."Case for detecting continuous range: Failing"
 
 Implement one failing test and at least one passing test:
 
