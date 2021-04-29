@@ -44,8 +44,10 @@ Start test-driven development:
 1. Establish quality parameters for your project: What is the maximum complexity you would allow?4
 2. How much duplication would you consider unacceptable? more than 0(no duplicates)
 3. What is the coverage you'll aim for?100 %
+
 Adapt/adopt/extend the `yml` files from one of your workflow folders.
- Here the yml file is adopted to limit complexity of 4, and duplication check was not added as it was capturing even the catch.hpp(tried with exclude command) and code coverage was added. However as the run fails, coverage could not be executed. Any suggestion on how all can be performed?
+
+Here the yml file is adopted to limit complexity of 4, and duplication check was not added as it was capturing even the catch.hpp(tried with exclude command) and code coverage was added. However as the run fails, coverage could not be executed. Any suggestion on how all can be performed?
  
 4 Write the smallest possible failing test."Case for detecting number of continuous range in the reading array given:Failing"
 
