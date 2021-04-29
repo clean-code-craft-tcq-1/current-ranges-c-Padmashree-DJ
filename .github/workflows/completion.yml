@@ -13,12 +13,6 @@ jobs:
     - name: all entries made
       run: bash ./.github/workflows/check-complete.sh
       
-    - name: Install lizard
-      run: pip install lizard
-
-    - name: Limit complexity
-      run: $HOME/.local/bin/lizard --exclude "./test/*" --CCN 3
-      
     - name: build
       run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker *.c*
       
