@@ -24,6 +24,7 @@ jobs:
 
     - name: Limit complexity
       run: $HOME/.local/bin/lizard --exclude "./test/*" --CCN 3
+      
     - name: build
       run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker *.c*
       
